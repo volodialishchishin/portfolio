@@ -1,0 +1,128 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.mainBlock {
+  min-height: 100vh;
+  background-color: $bgColor;
+  display: flex;
+  align-items: center;
+
+  .particles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.3;
+    z-index: 1;
+    margin-top: 0;
+    min-height: 100vh;
+  }
+
+  .mainContainer {
+    justify-content: space-evenly;
+    z-index: 22;
+
+    .greeting {
+      width: 294px;
+      margin: 30px 5px;
+      @include text($secondFontFamily, 300, 15px, 1.2);
+
+      @media screen and (max-width: 769px){
+        margin: 70px 5px;
+      }
+
+      h1 {
+        margin: 10px 0 5px;
+        @include text($primaryFontFamily, 800, 50px, 1.2);
+        position: relative;
+        z-index: 2;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 180px;
+          height: 10px;
+          background-color: $primarySecondColor;
+          bottom: 72px;
+          z-index: -1;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 289px;
+          height: 10px;
+          background-color: $primarySecondColor;
+          left: 0;
+          bottom: 12px;
+          z-index: -1;
+        }
+      }
+
+      p {
+        margin: 0 0 0 53px;
+        @include text($secondFontFamily, 400, 25px, 1.2);
+      }
+    }
+
+    .photo {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 30px 5px 30px 5px;
+      background-size: cover;
+      background-position: center;
+      z-index: 500;
+
+      img {
+        width: 300px;
+        height: 400px;
+        @media screen and (min-width: 1200px) {
+          width: 400px;
+          height: 530px;
+        }
+        @media screen and (max-width: 426px) {
+          width: 280px;
+          height: 370px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        width: 350px;
+        height: 500px;
+      }
+
+      .border {
+        position: absolute;
+        width: 300px;
+        height: 415px;
+        background-color: rgba(234, 128, 33, 0);
+        border: 7px solid $primaryColor;
+        left: 20px;
+        top: -10px;
+        z-index: -1;
+        @media screen and (max-width: 426px) {
+          width: 260px;
+          height: 380px;
+        }
+        @media screen and (min-width: 1200px) {
+          width: 400px;
+          height: 550px;
+        }
+
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 425px) {
+    .mainContainer {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+

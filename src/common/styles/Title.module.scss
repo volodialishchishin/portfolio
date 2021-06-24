@@ -1,0 +1,30 @@
+@import './sass/variables';
+@import './sass/mixins';
+
+.title{
+    margin-bottom: 30px;
+}
+
+.title h2{
+    @include text($primaryFontFamily, 500, 32px, 1.2);
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.title h3{
+    @include text($primaryFontFamily, 500, 20px, 1.2);
+    text-transform: capitalize;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    background: $primaryColor;
+    width: 55px;
+    height: 1px;
+    transform: translate(-50%, 50%);
+    left: 50%;
+}

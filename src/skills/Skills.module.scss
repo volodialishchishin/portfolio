@@ -1,0 +1,39 @@
+@import '../common/styles/sass/variables';
+@import '../common/styles/sass/mixins';
+
+.skillsBlock {
+  padding: 5vh 0;
+  background-color: $bgSecondColor;
+  display: flex;
+  align-items: center;
+
+  .skillsContainer {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .skills {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .icon{
+        color: $primaryColor;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+
+    @media screen and (min-width: 1200px) {
+      width: 1140px;
+    }
+
+    @media screen and (max-width: 425px) {
+      width: 100%;
+    }
+  }
+}
+
+
+
